@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>Shooping list App</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="manifest" href="/manifest.json">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
@@ -24,16 +23,7 @@
 		</div>
 		<button class="button btnClr" type="button">Clear List</button>
 	</div>
-
-	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/sw.js')
-				.then(function () {
-					console.log('SW registered');
-				});
-		}
-	</script>
-	<script type="text/javascript" src="index.js"></script>
+	
 	<script>
 		if (navigator.serviceWorker.controller) {
 			console.log('[PWA Builder] active service worker found, no need to register')
@@ -47,6 +37,7 @@
 			});
 		}
 	</script>
+	<script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
