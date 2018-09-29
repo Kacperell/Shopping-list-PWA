@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Shooping list App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="manifest" href="/manifest.json">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="topContent">
+			<h1 class="header">Shooping List<img class="shoopingCart" src="images/cart2.png" alt=""> </h1>
+
+			<div class="form">
+				<input class="input EnterProduct" placeholder="Enter product">
+				<button class="button btnSubmit" type="button">Add</button>
+			</div>
+			<ul class="list">
+				<!-- <li>this is a todo item <input type="checkbox" class="checkbox"></li>
+					<li>this is a todo item <input type="checkbox" class="checkbox"></li> -->
+			</ul>
+		</div>
+		<button class="button btnClr" type="button">Clear List</button>
+	</div>
+
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js')
+				.then(function () {
+					console.log('SW registered');
+				});
+		}
+	</script>
+	<script type="text/javascript" src="index.js"></script>
+	<script>
+		if (navigator.serviceWorker.controller) {
+			console.log('[PWA Builder] active service worker found, no need to register')
+		} else {
+
+			//Register the ServiceWorker
+			navigator.serviceWorker.register('pwabuilder-sw.js', {
+				scope: './'
+			}).then(function (reg) {
+				console.log('Service worker has been registered for scope:' + reg.scope);
+			});
+		}
+	</script>
+</body>
+
+</html>
