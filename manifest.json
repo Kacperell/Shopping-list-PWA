@@ -4,7 +4,7 @@
   "start_url": ".",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "transparent",
+  "background_color": "#5FAAE5",
   "theme_color": "#5FAAE5",
   "description" : "Simple Shopping List",
  "icons": [
